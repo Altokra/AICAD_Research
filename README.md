@@ -45,8 +45,13 @@ conda install jupyter notebook
 │   ├── processed/           # 预处理后的数据
 │   └── outputs/             # 生成/修复结果
 ├── docs/                    # 文档
-│   ├── papers/              # 论文阅读笔记
-│   └── notes/               # 学习笔记
+│   ├── papers/              # 论文PDF
+│   │   └── attention_is_all_your_need.pdf
+│   ├── notes/               # 学习笔记
+│   │   ├── concepts/        # 原子化概念笔记
+│   │   ├── papers/          # 论文阅读笔记
+│   │   ├── learning/       # 学习心得/视频笔记
+│   │   └── templates/      # 笔记模板
 ├── notebooks/               # Jupyter notebooks
 │   └── experiments/         # 实验notebooks
 ├── src/                     # 源代码
@@ -98,19 +103,60 @@ python scripts/eval.sh --checkpoint checkpoints/best.pth
 
 ## 相关论文
 
-### CAD生成与修复
-- [TODO] 添加相关论文
-
 ### Transformer / Attention
-- Vaswani et al. *Attention Is All You Need* (NeurIPS 2017)
+- Vaswani et al. *Attention Is All You Need* (NeurIPS 2017) [[笔记]](docs/notes/papers/attention-is-all-you-need.md)
 
-### 三维生成
-- [TODO] 添加3D生成相关论文
+### CAD 生成
+- [TODO] CAD 生成相关论文
+
+### CAD 修复 / 水密性
+- [TODO] CAD 修复相关论文
+
+### 3D 生成
+- Point-E (OpenAI, 2022)
+- Shap-E (OpenAI, 2023)
+- DreamFusion (Google, 2022)
+- CADGPT (2023)
 
 ## 学习笔记
 
-- [papers/](docs/papers/) - 论文阅读笔记
+- [papers/](docs/papers/) - 论文PDF
 - [notes/](docs/notes/) - 学习记录
+
+## 研究路线图
+
+详见 [docs/notes/research-roadmap.md](docs/notes/research-roadmap.md)
+
+### 基础知识
+
+| 概念 | 笔记位置 | 状态 |
+|------|----------|------|
+| [[cad-basics]] | CAD 基础原理 | 待学习 |
+| [[cad-vs-cae]] | CAD 与 CAE 区别 | 待学习 |
+| [[step-format]] | STEP 格式 | 待学习 |
+| [[stl-format]] | STL 格式 | 待学习 |
+| [[iges-format]] | IGES 格式 | 待学习 |
+| [[obj-format]] | OBJ 格式 | 待学习 |
+
+### 核心算法
+
+| 概念 | 笔记位置 | 状态 |
+|------|----------|------|
+| [[transformer-architecture]] | Transformer 架构 | 待学习 |
+| [[self-attention]] | 自注意力机制 | 待学习 |
+| [[multi-head-attention]] | 多头注意力 | 待学习 |
+| [[scaled-dot-product-attention]] | 缩放点积注意力 | 待学习 |
+| [[positional-encoding]] | 位置编码 | 待学习 |
+
+### 研究方向
+
+| 方向 | 笔记位置 | 状态 |
+|------|----------|------|
+| [[cad-watertightness]] | CAD 水密性 | 待学习 |
+| [[cad-generation]] | CAD 自动生成 | 待学习 |
+| [[cad-repair]] | CAD 智能修复 | 待学习 |
+| [[top-conferences]] | 顶会指南 | 待学习 |
+| [[pytorch-learning]] | PyTorch 学习路径 | 待学习 |
 
 ## 致谢
 
