@@ -158,6 +158,26 @@ python scripts/eval.sh --checkpoint checkpoints/best.pth
 | [[top-conferences]] | 顶会指南 | 待学习 |
 | [[pytorch-learning]] | PyTorch 学习路径 | 待学习 |
 
+
+
+
+## 开源代码学习
+
+
+### GDS3D
+
+#### 04/01/2026
+
+clone仓库 ，
+
+复现
+Debug\GDS3D.exe" -p "techfiles"" -i "gds"
+
+复现基本成功
+---
+
+klayout ==> 0.30.7
+
 ## 致谢
 
 感谢lg师兄，zqw老师的指导
