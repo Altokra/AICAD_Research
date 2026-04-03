@@ -178,6 +178,26 @@ Debug\GDS3D.exe" -p "techfiles"" -i "gds"
 
 klayout ==> 0.30.7
 
+
+
+
+
+
+
+## TODO
+
+### 辅助学习
+
+[zhihu](https://www.zhihu.com/question/61077555/answer/2914496700)
+
+[limu](https://www.bilibili.com/video/BV1pu411o7BE/?vd_source=66f42ac67f5881b4de8c76d2e71a1137)
+
+[3Blue1Brown](bilibili.com/video/BV1TZ421j7Ke/?spm_id_from=333.788.recommend_more_video.1&trackid=web_related_0.router-related-2479604-9shrk.1775111670857.989)
+
+
+[Michael Nielsen](http://neuralnetworksanddeeplearning.com/)
+
+
 ## 致谢
 
 感谢lg师兄，zqw老师的指导
