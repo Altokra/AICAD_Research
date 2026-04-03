@@ -173,7 +173,10 @@ clone仓库 ，
 复现
 Debug\GDS3D.exe" -p "techfiles"" -i "gds"
 
+- 04/03/2026  新增~/scripts/.bat文件，直接运行
 复现基本成功
+
+
 ---
 
 klayout ==> 0.30.7

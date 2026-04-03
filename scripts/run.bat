@@ -1,0 +1,1 @@
+"F:\01 learning\02 Research\AICAD_Research\references\GDS3D\win32\GDS3D.exe" -p "F:\01 learning\02 Research\AICAD_Research\references\GDS3D\techfiles\example.txt" -i "F:\01 learning\02 Research\AICAD_Research\references\GDS3D\gds\example.gds"
