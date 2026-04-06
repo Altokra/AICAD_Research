@@ -26,33 +26,29 @@ date: 2026-04-01
 
 ```
 GDS3D/
-├── README.md                    # 项目说明
-├── CHANGELOG.txt               # 版本变更记录
-├── FIXME.txt                    # 待修复问题
-│
-├── libgdsto3d/                 # ★ 核心库：GDSII 解析 + 3D 生成
-│   ├── gdsparse.cpp/h           # GDSII 文件解析器
-│   ├── gdsobject.cpp/h          # GDS 对象（单元）表示
-│   ├── gdsobjectlist.cpp/h     # 对象列表管理
-│   ├── gdselements.cpp/h        # GDS 图元（Boundary, Path, Text 等）
-│   ├── gdspolygon.cpp/h         # 多边形处理 + 三角剖分
-│   ├── gdspath.cpp/h            # 路径处理
-│   ├── gdstext.cpp/h            # 文本处理
-│   ├── gds_globals.cpp/h        # 全局定义
+├── libgdsto3d/                  # GDSII 解析 + 3D 生成
+│   ├── gdsparse.cpp/h           # 解析 GDSII 文件
+│   ├── gdsobject.cpp/h          # GDS 对象（单元）表示，一个完整的GDS单元
+│   ├── gdsobjectlist.cpp/h     # 管理GDS单元
+│   ├── gdselements.cpp/h        # GDS 图元（Boundary, Path, Text 等）主要定义计算模块，方便进行多边形运算
+│   ├── gdspolygon.cpp/h         # 把多边形切为三角形，方便openGL渲染，其中用到了clipper库做布尔运算
+│   ├── gdspath.cpp/h            # 将有宽度的线段转化为封闭多边形
+│   ├── gdstext.cpp/h            # 标注文本处理
+│   ├── gds_globals.cpp/h        # 全局定义，一些工具函数
 │   ├── process_cfg.cpp/h        # 工艺配置文件解析
 │   ├── assembly_cfg.cpp/h       # 装配配置
-│   ├── Voronoi3D.cpp/h          # Voronoi 3D 剖分（GMSH 导出用）
+│   ├── Voronoi3D.cpp/h          # GMSH 导出用
 │   │
-│   ├── clipper/                 # 第三方库：多边形布尔运算
+│   ├── clipper/                 # 多边形布尔运算
 │   │   ├── clipper.hpp/cpp
 │   │   └── CMakeLists.txt
 │   │
-│   └── voro++/                  # 第三方库：Voronoi 图
-│       ├── src/                 # 核心源码
-│       ├── examples/            # 示例
-│       └── zeo/                 # 沸石结构
+│   └── voro++/                  # Voronoi 图
+│       ├── src/                 
+│       ├── examples/            
+│       └── zeo/                 
 │
-├── gdsoglviewer/               # ★ OpenGL 3D 渲染
+├── gdsoglviewer/               #  OpenGL 3D 渲染
 │   ├── renderer.cpp/h           # OpenGL 渲染器（VBO, Shader, FBO）
 │   ├── gdsobject_ogl.cpp/h      # OpenGL 对象绘制
 │   ├── gdsparse_ogl.cpp/h       # OpenGL 解析接口
@@ -77,40 +73,12 @@ GDS3D/
 │   ├── AA_BOUNDING_BOX.cpp/h   # 轴对齐包围盒
 │   └── Maths.h                 # 公共头文件
 │
-├── linux/                       # Linux 平台代码
-│   ├── main.cpp/h              # Linux 入口
-│   ├── Makefile
-│   └── BuildLinux.sh           # 编译脚本
-│
-├── mac/                         # Mac 平台代码
-│   ├── main.cpp/h
-│   ├── OpenGLView.mm           # OpenGL 视图
-│   ├── GDS3D.xcodeproj/        # Xcode 项目
-│   └── GDS3D.app/              # 编译产物
-│
-├── win32/                       # Windows 平台代码
-│   ├── main.cpp/h
-│   ├── GDS3D.sln               # Visual Studio 解决方案
-│   ├── GDS3D.vcxproj           # VS 项目文件
-│   └── BuildWin32.cmd          # 编译脚本
-│
-├── skill/                       # Cadence 集成脚本
+├── skill/                       # Cadence Virtuoso插件
 │   └── icdGDS3D.il             # Skill 脚本（Cadence 启动加载）
 │
-├── techfiles/                   # ★ 工艺定义文件
-│   ├── example.txt             # 示例工艺
-│   ├── gds3d_techfile.txt     # GDS3D 工艺
-│   ├── sky130.txt              # SkyWater 130nm 工艺
-│   └── sg13g2.txt              # SG13G2 工艺
-│
-├── gds/                         # 示例 GDSII 文件
-│   ├── example.gds
-│   └── example_sky130.gds
-│
-├── assembly/                    # 装配文件示例
+├── assembly/                    # 将多个芯片按照assembly中的规则同时渲染
 │   └── as_example.assembly     # 多 GDS 装配定义
-│
-└── Run*.cmd/sh/command          # 各平台运行脚本
+
 ```
 
 ---

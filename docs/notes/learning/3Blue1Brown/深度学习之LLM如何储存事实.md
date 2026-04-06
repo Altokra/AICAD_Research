@@ -1,13 +1,13 @@
 ---
 type: video
-title: "Transformer 的核心"
+title: "深度学习之LLM如何储存事实"
 channel_creator: 
 url: 
 platform: # YouTube / Bilibili / Coursera 等
 duration: 
 tags:
   - video/tutorial
-date_watched: 2026-04-02
+date_watched: 2026-04-03
 ---
 
 > [!info] 视频简介
@@ -23,9 +23,9 @@ date_watched: 2026-04-02
 - **12:15** - 常见错误排查与总结
 
 ## 🧠 2. 核心知识总结 (Key Takeaways)
-
-query matrix-> $W_Q$
-key matrix -> $W_k$
+1. 
+2. 
+3. 
 
 ## ❓ 3. 疑问与解答 (Q&A)
 - **问题**：视频中某个地方没看懂 / 没讲透？

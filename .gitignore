@@ -78,3 +78,15 @@ temp/
 
 # 忽略 Claude Code 配置文件
 .claude/
+
+# 忽略 Vscode 配置文件
+.vscode/
+
+
+# GDS3D build outputs
+references/GDS3D/win32/x64/
+references/GDS3D/win32/Debug/
+references/GDS3D/win32/Release/
+references/GDS3D/win32/*.exe
+references/GDS3D/libgdsto3d/voro++/examples/*/
+references/GDS3D/libgdsto3d/voro++/zeo/*/

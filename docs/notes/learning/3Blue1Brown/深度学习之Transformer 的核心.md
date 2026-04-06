@@ -1,13 +1,13 @@
 ---
 type: video
-title: 芯片工艺合集
-channel_creator:
-url: https://bilibili.com/video/BV1raNAejEuX
-platform:
-duration:
+title: "Transformer 的核心"
+channel_creator: 
+url: 
+platform: # YouTube / Bilibili / Coursera 等
+duration: 
 tags:
   - video/tutorial
-date_watched: 2026-04-03
+date_watched: 2026-04-02
 ---
 
 > [!info] 视频简介
@@ -24,39 +24,47 @@ date_watched: 2026-04-03
 
 ## 🧠 2. 核心知识总结 (Key Takeaways)
 
+### query矩阵与key矩阵
 
-### 冶炼硅锭
+query matrix-> $W_Q$
 
-1. 石墨坩埚：98%~99%冶炼级工业硅
-2. HCl提纯，高中化学：磨砂多晶硅
-3. 柴可拉斯基法（提拉法），石英坩埚：单晶硅棒
+得到查询矩阵
 
-### 制造晶圆
+key matrix -> $W_k$
 
-1. 提拉后切头去尾，四探针法测电阻率（轴向杂志浓度），裁成硅段（30cm）
-2. 滚磨+定位边（定位、类型、晶向）
-3. 切片（内圆切割机、金刚线多线切割机）
-4. 机械打磨，背损伤，倒角、化学刻蚀
-5. 化学机械抛光（CMP）
+key倾向于解答Query
 
-### 光刻工艺
-
-光：快
-
-- 光掩膜
-- 光刻机
-- 光刻胶
+所有的KQ相乘之后得到相关程度，再通过softmax函数变成0-1 的==相关度==
+ 
+![[Pasted image 20260403192419.png]]
 
 
-刻蚀与沉积、离子注入
-### 刻蚀晶体管
+论文中的表达如下
+$$
+\operatorname{Attention}(Q,K,V)=\operatorname{softmax}(\frac{QK^T}{\sqrt{d_k}})V
+$$
 
-### 薄膜沉积
+- masking
+防止后方token影响前方token
 
-CVD
 
-### CMP打磨
+### Value矩阵
 
+在我们的attention pattern里加入Vmatrix，得到许多 $\Delta E$ 
+
+得到更加精确的嵌入向量
+
+
+==single head of attention==
+
+
+value down/value up
+
+
+### 多次self-attention
+
+
+multi-headed attention
 ## ❓ 3. 疑问与解答 (Q&A)
 - **问题**：视频中某个地方没看懂 / 没讲透？
 - **解答**：（自己查阅资料后的补充说明，或链接到其他笔记 [[解答笔记]]）

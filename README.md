@@ -182,9 +182,15 @@ Debug\GDS3D.exe" -p "techfiles"" -i "gds"
 klayout ==> 0.30.7
 
 
+#### 04/06/2026
+
+bug1:使用ruler闪退，怀疑是内存爆了
 
 
+## 训练模型
 
+
+[pytorch](https://www.bilibili.com/video/BV1e34y1M7wR/?spm_id_from=333.337.search-card.all.click&vd_source=8dbf3b619c8eff9c99a131855ea86c0f)
 
 
 ## TODO
