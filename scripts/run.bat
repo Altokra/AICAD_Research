@@ -1,1 +1,1 @@
-"E:\01 learning\02 Research\AICAD_Research\references\GDS3D\win32\GDS3D.exe" -p "E:\01 learning\02 Research\AICAD_Research\references\GDS3D\techfiles\sky130_s10.txt" -i "E:\01 learning\02 Research\AICAD_Research\references\GDS3D\gds\example_sky130.gds"
+"E:\01 learning\02 Research\AICAD_Research\references\GDS3D\win32\x64\Release\GDS3D.exe" -p "E:\01 learning\02 Research\AICAD_Research\references\GDS3D\techfiles\example.txt" -i "E:\01 learning\02 Research\AICAD_Research\references\GDS3D\gds\example.gds"

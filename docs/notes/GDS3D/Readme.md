@@ -264,6 +264,30 @@ GMSH 导出 (CAE)        ←→    有限元分析集成
 3. Clipper 库的多边形布尔运算原理是什么？
 
 ---
+## 代码更新
+
+
+### stl导出
+
+新增stl_report.cpp/h,实现导出功能
+
+更改win_keymap.cpp设置快捷键O注释
+
+更改gdsparse_ogl.cp绑定按键
+
+
+### step导出
+
+导入OCCT开源库
+
+配置hxx/lib/dll
+
+编写step_export.cpp/h
+
+待优化（导出速度，导出大小）
+
+
+
 
 ## 参考资料
 
